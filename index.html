@@ -631,6 +631,14 @@
     
     // Optionally clear the form
     document.getElementById('contact-form').reset();
+
+    // Send event to Meta Pixel (Facebook Pixel)
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead'); // Track the lead event
+      console.log('Event "Lead" sent to Meta Pixel.');
+    } else {
+      console.error('Meta Pixel is not initialized!');
+    }
   }
 </script>
 
