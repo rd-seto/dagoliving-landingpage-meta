@@ -71,7 +71,7 @@ function openWhatsApp(message) {
 
 // Fungsi untuk membuka WhatsApp dengan pesan tertentu
 function openWhatsApp(message) {
-  const phoneNumber = '6281234567890'; // Ganti dengan nomor WhatsApp Anda
+  const phoneNumber = '6281233007790'; // Ganti dengan nomor WhatsApp Anda
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
   window.open(url, '_blank');
 }
