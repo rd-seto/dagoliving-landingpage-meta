@@ -1,0 +1,497 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Navbar */
+  nav ul li a {
+    text-decoration: none;
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 640px) {
+    .carousel-caption h1 {
+      font-size: 2.5rem;
+    }
+    .carousel-caption h2 {
+      font-size: 1.5rem;
+    }
+    .carousel-caption p {
+      font-size: 1rem;
+    }
+    .container {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  /* ----------NAVIGATION BAR---------- */
+nav {
+    background-color: #ffffff;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
+  }
+  
+  /* Memberikan jarak pada bagian atas carousel untuk menyesuaikan dengan navbar */
+  #home {
+    padding-top: 70px; /* Memberikan ruang sesuai tinggi navbar */
+  }
+  
+  /* Untuk perangkat mobile dan tablet */
+  @media (max-width: 576px) {
+    #home {
+      padding-top: 90px; /* Lebih besar pada perangkat mobile */
+    }
+  }
+  
+  /* Responsif untuk Navbar */
+  @media (max-width: 991px) {
+    .navbar-nav {
+      text-align: center;
+    }
+  
+    .navbar-nav .nav-item {
+      margin: 10px 0;
+    }
+  }
+
+/* ----------  HOME SECTION CAROUSEL---------- */
+/* Overlay untuk Carousel */
+.carousel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Overlay dengan transparansi */
+    z-index: 1; /* Pastikan overlay berada di bawah konten */
+  }
+  
+  /* Posisi Caption dan Konten */
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Memposisikan di tengah */
+    z-index: 2; /* Pastikan caption di atas overlay */
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center; /* Pastikan teks tetap terpusat */
+  }
+  
+  /* Styling Konten Carousel */
+  .carousel-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .carousel-content h1 {
+    font-size: 3rem; /* Ukuran font untuk judul utama */
+    color: #fff; /* Warna font putih */
+    margin-bottom: 10px;
+  }
+  
+  .carousel-content h2 {
+    font-size: 2rem;
+    color: #C6A977; /* Warna coklat untuk subjudul */
+    margin-bottom: 10px;
+  }
+  
+  .carousel-content p {
+    font-size: 1.2rem; /* Ukuran font untuk deskripsi */
+    color: #fff; /* Warna font putih */
+    margin-bottom: 20px;
+  }
+  
+  /* Styling tombol CTA */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px; /* Jarak tombol dari teks */
+  }
+  
+  /* Ukuran Default tombol */
+  .cta-buttons button {
+    font-size: 1rem;
+    padding: 10px 30px;
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    background-color: #c6a977; /* Warna latar belakang tombol */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Efek hover */
+  .cta-buttons button:hover {
+    transform: translateY(-5px); /* Efek hover */
+  }
+  
+  /* Kustomisasi ukuran tombol */
+  
+  /* Tombol kecil */
+  .cta-buttons .btn-small {
+    font-size: 0.875rem; /* Ukuran font lebih kecil */
+    padding: 8px 20px; /* Padding lebih kecil */
+  }
+  
+  /* Tombol medium */
+  .cta-buttons .btn-medium {
+    font-size: 1rem; /* Ukuran font standar */
+    padding: 10px 30px; /* Padding standar */
+  }
+  
+  /* Tombol besar */
+  .cta-buttons .btn-large {
+    font-size: 1.2rem; /* Ukuran font lebih besar */
+    padding: 12px 40px; /* Padding lebih besar */
+  }
+  
+  
+  
+  /* Pastikan Caption Selalu Terlihat */
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white; /* Pastikan teks tetap terlihat */
+  }
+  
+  /* Gambar Carousel */
+  .carousel-item img {
+    height: 90vh;
+    width: 100%;
+    object-fit: cover; /* Pastikan gambar mengisi ruang dengan baik */
+  }
+  
+  /* Responsivitas pada mobile */
+  @media (max-width: 768px) {
+    .carousel-caption {
+      padding: 0 10px;
+      font-size: 1rem; /* Ukuran font lebih kecil untuk mobile */
+    }
+    .cta-buttons {
+      flex-direction: column;
+      gap: 15px;
+    }
+    .cta-buttons button {
+      padding: 12px 40px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .carousel-caption h1 {
+      font-size: 1.5rem;
+    }
+    .carousel-caption h2 {
+      font-size: 1.2rem;
+    }
+    .carousel-caption p {
+      font-size: 0.875rem;
+    }
+    .cta-buttons button {
+      padding: 8px 25px;
+    }
+  }
+  
+  /*  ----------FASILITAS SECTION---------- */
+/* Fasilitas Section Styling */
+#fasilitas .fasilitas-item {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text */
+    transition: transform 0.3s ease-in-out; /* Smooth hover effect */
+  }
+  
+  #fasilitas .fasilitas-item img {
+    width: 3rem; /* Default icon size */
+    transition: transform 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  #fasilitas .fasilitas-item img:hover {
+    transform: scale(1.3); /* Enlarge icon on hover */
+  }
+  
+  #fasilitas .fasilitas-item p {
+    margin-top: 0.5rem; /* Space between icon and text */
+    font-size: 1rem; /* Adjust text size */
+    color: #333; /* Default text color */
+    transition: color 0.2s ease-in-out; /* Smooth hover effect */
+  }
+  
+  #fasilitas .fasilitas-item:hover p {
+    color: #c6a977; /* Change text color on hover */
+  }
+  
+  /* Flex container styling for 1-row layout */
+  #fasilitas .flex {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    justify-content: center; /* Center items in the row */
+    gap: 2rem; /* Space between items */
+  }
+  
+  /* ----------KENAPA MEMILIH KAMI SECTION---------- */
+  /* Section Styling */
+#kenapa-kami {
+    padding: 4rem 0;
+    background-color: #f3f4f6; /* Warna latar belakang */
+  }
+  
+  #kenapa-kami img {
+    width: 100%; /* Gambar memenuhi kontainer pada layar kecil */
+    max-width: 24rem; /* Maksimal lebar gambar */
+    border-radius: 1.2rem; /* Sudut gambar membulat */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Bayangan pada gambar */
+    transition: transform 0.3s ease-in-out; /* Animasi hover */
+  }
+  
+  #kenapa-kami img:hover {
+    transform: scale(1.2); /* Memperbesar gambar sedikit saat hover */
+  }
+  
+  #kenapa-kami h2 {
+    font-size: 1.875rem; /* Ukuran heading */
+    font-weight: 600; /* Tebal teks */
+    margin-bottom: 1rem; /* Jarak bawah */
+    color: #111827; /* Warna teks */
+  }
+  
+  #kenapa-kami p {
+    font-size: 1.125rem; /* Ukuran teks */
+    line-height: 1.75rem; /* Jarak antar baris */
+    color: #374151; /* Warna teks */
+    margin-top: 0.5rem;
+  }
+  
+  #kenapa-kami .flex {
+    gap: 2rem; /* Jarak antar elemen dalam flex */
+  }
+  
+  /* Responsivitas */
+  @media (min-width: 768px) {
+    #kenapa-kami .text-left {
+      text-align: left; /* Teks rata kiri pada layar lebih besar */
+    }
+  }
+  
+  /* Efek Hover untuk Gambar */
+.hover-effect img {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transisi halus */
+  }
+  
+  .hover-effect img:hover {
+    transform: scale(1.2); /* Membesarkan gambar menjadi 1.2 kali */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan lebih besar */
+  }
+  
+  /* ----------PERHITUNGAN R0I----------  */
+  /* Styling form */
+form input, form button {
+    transition: all 0.3s ease;
+  }
+  
+  form input:focus, form button:focus {
+    outline: none;
+    border-color: #4F46E5;
+  }
+  
+  form input, form button {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 0.8rem;
+  }
+  
+  form button {
+    cursor: pointer;
+
+    color: white;
+    border: none;
+    width: 100%;
+  }
+  
+  
+  /* Centered form elements */
+  #roi {
+    background-color: #f3f4f6;
+    padding: 4rem 0;
+  }
+  
+  #roi-result {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  /* ----------SPESIFIKASI BANGUNAN SECTION----------  */
+  /* Kustomisasi efek zoom dan transisi */
+/* Efek Zoom dan Transisi untuk Gambar dan Tabel */
+.hover\:scale-110:hover {
+    transform: scale(1.2);
+  }
+  
+  .transition-transform {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Custom ukuran gambar yang bisa diubah */
+  .custom-image-size {
+    width: 550px;  /* Ganti dengan ukuran yang Anda inginkan */
+    height: auto;  /* Menjaga proporsi gambar */
+    transition: all 0.3s ease; /* Efek halus saat gambar diubah ukurannya */
+  }
+  
+  .custom-image-size:hover {
+    transform: scale(1.0); /* Efek zoom saat di-hover */
+  }
+  
+  /* ----------TIPE UNIT SECTIION---------- */
+  /* Mengatur ukuran dan margin gambar ikon */
+img {
+    display: block;
+    width: 4rem; /* Ukuran lebar ikon */
+    height: 4rem; /* Ukuran tinggi ikon */
+    object-fit: contain; /* Menyesuaikan gambar tanpa merusak rasio */
+    margin-bottom: 0.5rem; /* Jarak antara ikon dan teks */
+    margin-left: auto;
+    margin-right: auto; /* Membuat ikon berada di tengah */
+  }
+  
+  /* Styling untuk Teks di bawah Ikon */
+  .text-lg {
+    font-size: 1.125rem; /* Ukuran font untuk deskripsi */
+    color: #333; /* Warna teks deskripsi */
+    text-align: center; /* Mengatur teks agar rata tengah */
+    margin-top: 8px;
+  }
+  
+  /* Styling untuk ikon container agar teks berada tepat di bawah ikon */
+  .icon-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat tiga kolom */
+    gap: 1rem; /* Jarak antar ikon */
+    margin-bottom: 1rem; /* Jarak bawah untuk setiap set ikon */
+  }
+  
+  /* Styling untuk tiap ikon */
+  .icon-item {
+    display: flex;
+    flex-direction: column; /* Membuat ikon dan teks berada dalam satu kolom */
+    align-items: center; /* Mengatur semua item di dalam kolom agar berada di tengah */
+    justify-content: center; /* Mengatur ikon dan teks agar vertikal terpusat */
+  }
+  
+  /* Efek Hover pada Card */
+  .hover\:scale-105:hover {
+    transform: scale(1.05); /* Membesarkan card saat hover */
+  }
+  
+  .transition-transform {
+    transition: transform 0.3s ease-in-out; /* Transisi efek */
+  }
+  
+  .hover\:shadow-xl:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Efek bayangan lebih besar saat hover */
+  }
+  
+  /* Styling untuk Tipe Unit Card */
+  .card {
+    background-color: #fff; /* Background warna putih */
+    border-radius: 0.5rem; /* Sudut yang membulat pada card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Bayangan ringan untuk card */
+    padding: 1.5rem; /* Padding untuk card */
+    transition: all 0.3s ease-in-out; /* Efek transisi saat hover */
+  }
+  
+  /* Untuk Card Hover */
+  .card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Efek bayangan lebih besar saat hover */
+    transform: scale(1.05); /* Membesarkan card saat hover */
+  }
+  
+  /* Styling untuk harga */
+  .font-bold {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #333;
+    margin-top: 1rem;
+  }
+  
+  /* Styling untuk tombol */
+  button {
+    padding: 1.5rem 2.5rem;
+    border-radius: 0.375rem;
+    background-color: #C6A977; /* Warna biru tombol */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect pada tombol */
+  button:hover {
+    background-color: #1d4ed8; /* Tombol menjadi biru lebih gelap saat hover */
+  }
+  
+  /* ----------GALLERI SECTIION---------- */
+
+/* Reset dan gaya dasar */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+/* Gaya tombol */
+.filter-btn {
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-btn:hover {
+  background-color: #CDAA6D; /* Warna hover */
+  transform: scale(1.05); /* Sedikit membesar saat hover */
+}
+
+.filter-btn:active {
+  background-color: #b38a5d; /* Warna klik */
+  transform: scale(0.95); /* Efek klik */
+}
+
+/* Gaya elemen galeri */
+.gallery-item {
+  display: none; /* Default disembunyikan */
+}
+
+.gallery-item.show {
+  display: block; /* Tampilkan yang sesuai filter */
+}
+
+.image-caption {
+  margin-top: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Tombol dengan background dinamis */
+.filter-btn:hover {
+  background-color: #e0b280; /* Warna hover kustom */
+}
